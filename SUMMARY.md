@@ -10,8 +10,8 @@
    * [Data-Driven testing.](webdriver_api_slozhnie_vzaimodeistviya/data-driven_testing.md)
 * [Page Object Pattern. Архитектура тестового проекта.](page_object_pattern_arhitektura_testovogo_proekta/README.md)
    * [Использование паттерна Page Object.](page_object_pattern_arhitektura_testovogo_proekta/ispolzovanie_patterna_page_object.md)
-   * [Альтернативные Page Object подходы.](page_object_pattern_arhitektura_testovogo_proekta/alternativnie_page_object_podhodi)
-   * [Вспомогательные инструмаенты.](page_object_pattern_arhitektura_testovogo_proekta/vspomogatelnie_instrumaenti)
+   * [Альтернативные Page Object подходы.](page_object_pattern_arhitektura_testovogo_proekta/alternativnie_page_object_podhodi.md)
+   * [Вспомогательные инструмаенты.](page_object_pattern_arhitektura_testovogo_proekta/vspomogatelnie_instrumaenti.md)
    * [Уровни абстракции. Создание кастомных элементов.](page_object_pattern_arhitektura_testovogo_proekta/urovni_abstraktsii_sozdanie_kastomnih_elementov)
-   * [Архитектура. Основные элементы. Примеры.](page_object_pattern_arhitektura_testovogo_proekta/arhitektura_osnovnie_elementi_primeri)
+   * [Архитектура. Основные элементы. Примеры.](page_object_pattern_arhitektura_testovogo_proekta/arhitektura_osnovnie_elementi_primeri.md)
 

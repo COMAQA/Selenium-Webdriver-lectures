@@ -97,13 +97,3 @@ XPath (XML path) - это язык для нодов (nodes) в XML докуме
 Так же мы можем использовать CSS локаторы внутри jQuery локаторов:
 
     $(‘input.someclass’)
-
-Полезные ссылки: 
-
-http://prostoitblog.ru/xpath-i-css/kak-sostavlyat-xpath-i-css-selektoryi
-
-http://www.praveenjana.com/injecting-jquery-selectors-into-selenium-webdriver/
-
-https://saucelabs.com/resources/why-jquery-in-selenium-css-locators-is-the-way-to-go
- No newline at end of file
-
