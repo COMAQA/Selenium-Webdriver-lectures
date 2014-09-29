@@ -1,87 +1,84 @@
 # Уровни абстракции. Создание кастомных элементов.
 
-Разрабатывая ПО или тестовый фреймворк мы должны помнить, что описывая разные сущности мы обязаны вводить абстракции, чтобы было потом легче заниматься поддержкой написанного кода. 
+## Уровни абстракции
 
-Уровень абстракции — это инкапсуляция в метод или обект реализации действия или сущности, используемых в программе. Чтобы в дальнейшем при изменение реализации действия не пришлось меня код в огромном количестве мест. Давайте посмотрим насколько это полезно в автоматизации.
+В автоматизации часто применяются следующие абстракции:
 
-WebDriver очень моный инструмент, который позволяет выполнять различные действия над элементами страниц. Для этого используется класс WebElement. Но, как и всегда, не все так просто и замечательно. На практике автоматизаторы  сталвкиваются с тем, что разработчки используют кастомные элементы, с которыми класс WebElement не работает. Тут нам и пригодится умение описывать элементы с помощью абстракций. К примеру, возьмем написание тестов для таблиц. Стандартные классы WebDriver не работают с таблицами, потому нам нужно написать свой. В котором мы опишем работу с элеметами таблицы (ячейки, строки и т. д.). 
+* Page Object
+* Page Element
 
-    public class Grid {
-        private static final String column = "//div[contains(@class,'ngHeaderCell') and .//td[(text()='%s')]]";
-        private static final By searchField = get("Grid.SearchField");
-        private static final By dropDownList = get("Grid.DropDownList");
-        private static final By arrowDown = get("Games.SortButtonDown");
-        private static final By arrowUp = get("Games.SortButtonUp");
-        private static final By rows  = get("Games.GridContainerRows");
-        private static final String cellsOfConcreteColumn = ".ngRow .ngCell.%s";
-        private static final By fieldTo = get("Grid.FieldTo");
-        private static final By fieldFrom = get("Grid.FieldFrom");
-        private static final By datepicker = get("Grid.Datepicker");
+Паттерн **Page Object** хорошо зарекомендовал себя в автоматизации. Основная идея – инкапсулировать логику поведения страницы в классе страницы. Таким образом, тесты будут работать не с низкоуровневым кодом, а с высокоуровневой абстракцией.
 
-        public static SelenideElement getColumn(String name){
-            return $(By.xpath(String.format(column, name)));
-        }
-    
-        public static SelenideElement getSearchField(String columnName){
-            return getColumn(columnName).$(searchField);
-        }
-    
-        public static SelenideElement getDropDownList(String columnName){
-            return getColumn(columnName).$(dropDownList);
-        }
-    
-        public static SelenideElement getFieldTo(String columnName){
-            return getColumn(columnName).$(fieldTo);
-        }
-    
-        public static SelenideElement getFieldFrom(String columnName){
-            return getColumn(columnName).$(fieldFrom);
-        }
-    
-        public static SelenideElement getDatepicker(){
-            return $(datepicker);
-        }
-    
-        public static ElementsCollection getCells(String colunmName){
-            return $$(String.format(cellsOfConcreteColumn, getUniqueCssClass(colunmName)));
-        }
+Плюсы Page Object:
 
-        public static ElementsCollection getRows(){
-            return $$(rows);
-        }
+* Разделение полномочий: вся логика страницы описывается в Page Object классах, а тестовые классы лишь используют их публичные методы и проверяют результат.
+* DRY – все локаторы помещаются в одном месте 
+* Инкапсуляция работы с драйвером. Полезно при кросс-браузерном тестировании
+* Page Objects позволяет записать локаторы в декларативном стиле
+
+В классическом варианте, паттерн предполагает создание одного класса на одну страницу. Это может быть неудобно в ряде случаев:
+
+* Использование кастомных элементов при создании веб-приложений
+* Присутсвие кастомных элементов на многих страницах
+
+В решении этой проблемы может помочь использование наследования, но агрегация видится предпочтительнее. Поэтому лучше воспользоваться паттерном – Page Element. Page Elements – позволяет дробить страницу на более мелкие составляющие – блоки, виджеты и т.д. После чего эти блоки можно переиспользовать в нескольких страницах.
+
+
+## Кастомные элементы
+
+WebDriver очень мощный инструмент, который позволяет выполнять различные действия над элементами страниц. Для этого используется класс WebElement. Но, как и всегда, не все так просто и замечательно. На практике автоматизаторы  сталвкиваются с тем, что разработчки используют кастомные элементы, с которыми класс WebElement не работает. К примеру, возьмем написание тестов для таблиц. Стандартные классы WebDriver не работают с таблицами, потому нам нужно написать свой. В котором мы опишем работу с элеметами таблицы (ячейки, строки и т. д.). 
+
+
+    import java.util.List;
     
-        public static void SortColumnInDirectOrder(String name){
-            getWebDriver().navigate().refresh();
-            getColumn(name).$(arrowUp).click();
-            Waiter.waitForJquery();
+    public class WebTable {
+        private WebElement _webTable;
+        
+        public WebTable(WebElement webTable)
+        {
+            set_webTable(webTable);
         }
-    
-        public static void SortColumnInInverseOrder(String name){
-            getWebDriver().navigate().refresh();
-            getColumn(name).$(arrowDown).click();
-            Waiter.waitForJquery();
+        
+        public WebElement get_webTable() {
+            return _webTable;
         }
-    
-        public static void verifyColumnPlace(String columnName, String id){
-            Assert.assertEquals(getUniqueCssClass(columnName), id);
+        
+        public void set_webTable(WebElement _webTable) {
+            this._webTable = _webTable;
         }
-    
-        public static void RefreshBrowser(){
-            getWebDriver().navigate().refresh();
-            Waiter.waitForJquery();
+        
+        public int getRowCount() {
+            List<WebElement> tableRows = _webTable.findElements(By.tagName("tr"));
+            return tableRows.size();
         }
-    
-        private static String getUniqueCssClass(String columnName){
-            String classValue = getColumn(columnName).getAttribute("class");
-            String[] classes = classValue.split(" ");
-            String result = "";
-            for(String str : classes){
-                if (str.contains("col")){
-                    result = str;
-                    break;
-                }
+        
+        public int getColumnCount() {
+            List<WebElement> tableRows = _webTable.findElements(By.tagName("tr"));
+            WebElement headerRow = tableRows.get(0);
+            List<WebElement> tableCols = headerRow.findElements(By.tagName("td"));
+            return tableCols.size();
+        }
+        
+        public WebElement getCellEditor(int rowIdx, int colIdx, int editorIdx) throws NoSuchElementException {
+            try {
+                List<WebElement> tableRows = _webTable.findElements(By.tagName("tr"));
+                WebElement currentRow = tableRows.get(rowIdx-1);
+                List<WebElement> tableCols = currentRow.findElements(By.tagName("td"));
+                WebElement cell = tableCols.get(colIdx-1);
+                WebElement cellEditor = cell.findElements(By.tagName("input")).get(editorIdx);
+                return cellEditor;
+            } catch (NoSuchElementException e) {
+                throw new NoSuchElementException("Failed to get cell editor");
             }
-            return result;
         }
+        
+        public WebElement getCellEditor(int rowIdx, int colIdx, int editorIdx) {
+            List<WebElement> tableRows = _webTable.findElements(By.tagName("tr"));
+            WebElement currentRow = tableRows.get(rowIdx-1);
+            List<WebElement> tableCols = currentRow.findElements(By.tagName("td"));
+            WebElement cell = tableCols.get(colIdx-1);
+            WebElement cellEditor = cell.findElements(By.tagName("input")).get(0);
+            return cellEditor;
+            }
     }
 
