@@ -74,7 +74,6 @@ XPath (XML path) - это язык для нодов (nodes) в XML докуме
           js.ExecuteScript("var jq = document.createElement('script');
           jq.src = '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
           document.getElementsByTagName('head')[0].appendChild(jq);");
-          Thread.Sleep(300); // Предположительно индуская ожидалка и требует удаления
       }
 
 
