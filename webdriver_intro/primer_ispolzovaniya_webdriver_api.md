@@ -11,40 +11,40 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverExample  {
     public static void main(String[] args) {
-        // Create a new instance of the Firefox driver
-        // Notice that the remainder of the code relies on the interface,
-        // not the implementation.
+        // Создаем экземпляр WebDriver
+        // Следует отметить что скрипт работает с интерфейсом,
+        // а не с реализацией.
         WebDriver driver = new FirefoxDriver();
 
-        // And now use this to visit Google
+        // Открываем гугл, используя драйвер
         driver.get("http://www.google.com");
-        // Alternatively the same thing can be done like this
+        // По-другому это можно сделать так:
         // driver.navigate().to("http://www.google.com");
 
-        // Find the text input element by its name
+        // Находим элемент по атрибуту name
         WebElement element = driver.findElement(By.name("q"));
 
-        // Enter something to search for
+        // Вводим текст
         element.sendKeys("Selenium");
 
-        // Now submit the form. WebDriver will find the form for us from the element
+        // Отправляем форму, при этом дравер сам определит как отправить форму по элементу
         element.submit();
 
-        // Check the title of the page
+        // Проверяем тайтл страницы
         System.out.println("Page title is: " + driver.getTitle());
 
-        // Google's search is rendered dynamically with JavaScript.
-        // Wait for the page to load, timeout after 10 seconds
+        // Страницы гугл динамически отрисовывается с помощью javascript
+        // Ждем загрузки страницы с таймаутом в 10 секунд
         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
-                return d.getTitle().toLowerCase().startsWith("cheese!");
+                return d.getTitle().toLowerCase().startsWith("Selenium");
             }
         });
 
-        // Should see: "Selenium - Google Search"
+        // Ожидаем увидеть: "Selenium - Google Search"
         System.out.println("Page title is: " + driver.getTitle());
 
-        //Close the browser
+        // Закрываем браузер
         driver.quit();
     }
 }```
