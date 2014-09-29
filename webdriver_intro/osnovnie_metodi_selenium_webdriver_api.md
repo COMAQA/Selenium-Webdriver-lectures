@@ -33,3 +33,6 @@
         WebElement element = driver.findElement(By.id("#element_id")));
 2. Второй - вернет весь список элементов, удовлетворяющих запросу:
         List<WebElement> elements = driver.findElements(By.name("elements_name"))
+
+Более полную документацию Webdriver API можно найти по адресу:
+http://selenium.googlecode.com/git/docs/api/java/index.html
