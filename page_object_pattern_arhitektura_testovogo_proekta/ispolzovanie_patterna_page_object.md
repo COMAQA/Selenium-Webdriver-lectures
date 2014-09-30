@@ -1,5 +1,7 @@
 # Использование паттерна Page Object.
 
+## Page object
+
 Page Object - один из наиболее полезных и используемых архитектурных решений в автоматизации. Данный шаблон проектирования помогает инкапсулировать работу с отдельными элементами страницы, что позволяет уменьшить количество кода и его поддержку. Если, к примеру, дизайн одной из страниц изменён, то нам нужно будет переписать только соответствующий класс, описывающий эту страницу.
 
 Основные преимущества:
@@ -51,3 +53,37 @@ Page Object - один из наиболее полезных и использ�
         }
 }
     
+    
+## Page Factory
+
+Еще одним вариантом применения page object шаблона является использование класса Page Factory из библиотеки Selenium. Давайте разберёмся, как с тим работать. Сначала нам нужно создать простой page object:
+
+    public class GoogleSearchPage {
+        private WebElement q;
+    
+        public void searchFor(String text) {
+            q.sendKeys(text);
+            q.submit();
+        }
+    } 
+    
+Теперь чтобы всё работало корректно нам нужно инициализировать наш page object. Это выглядит так:
+
+    package org.openqa.selenium.example;
+    
+    import org.openqa.selenium.WebDriver;
+    import org.openqa.selenium.WebElement;
+    import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+    import org.openqa.selenium.support.PageFactory;
+    
+    public class UsingGoogleSearchPage {
+        public static void main(String[] args) {
+            WebDriver driver = new HtmlUnitDriver();
+    
+            driver.get("http://www.google.com/");
+    
+            GoogleSearchPage page = PageFactory.initElements(driver, GoogleSearchPage.class);
+    
+            page.searchFor("Cheese");
+        }
+    }     

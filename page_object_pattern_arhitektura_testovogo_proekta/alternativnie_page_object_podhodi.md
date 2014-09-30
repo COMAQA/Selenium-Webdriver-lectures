@@ -75,37 +75,18 @@ Thucydides — это бесплатный проект с открытым ис
 
 Thucydides позволяет запускать тесты во всех браузерах, поддерживаемых Selenium, и полностью берет на себя работу с драйвером, его настройку, запуск и остановку. 
 
+## HTML Elements
 
-## Page Factory
+Фреймворк HTML Elements — инструмент для простой работы с элементами веб-страниц в тестах.
 
-Еще одним альтернативным подходом является использование класса Page Factory из библиотеки Selenium. Давайте разберёмся, как с тим работать. Сначала нам нужно создать простой page object:
+HTML Elements позволяет собирать page-объекты как конструктор. Из типизированных элементов вы можете собирать нужные вам блоки, которые можно объединять, комбинировать друг с другом и собирать из них page-объекты. Это значительно повышает степень переиспользования кода, делает его более читаемым и наглядным, а написание тестов — более простым.
 
-    public class GoogleSearchPage {
-        private WebElement q;
-    
-        public void searchFor(String text) {
-            q.sendKeys(text);
-            q.submit();
-        }
-    } 
-    
-Теперь чтобы всё работало корректно нам нужно инициализировать наш page object. Это выглядит так:
 
-    package org.openqa.selenium.example;
-    
-    import org.openqa.selenium.WebDriver;
-    import org.openqa.selenium.WebElement;
-    import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-    import org.openqa.selenium.support.PageFactory;
-    
-    public class UsingGoogleSearchPage {
-        public static void main(String[] args) {
-            WebDriver driver = new HtmlUnitDriver();
-    
-            driver.get("http://www.google.com/");
-    
-            GoogleSearchPage page = PageFactory.initElements(driver, GoogleSearchPage.class);
-    
-            page.searchFor("Cheese");
-        }
-    } 
+Основной репозиторий: https://github.com/yandex-qatools/htmlelements.
+
+Документация: https://github.com/yandex-qatools/htmlelements/blob/master/README.md.
+
+Также документирован код проекта.
+
+Примеры: https://github.com/yandex-qatools/htmlelements-examples.
+
