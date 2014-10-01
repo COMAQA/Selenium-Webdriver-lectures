@@ -15,21 +15,49 @@
 
     WebElement userName = driver.findElement(By.cssSelector("input"));
     
+Поиск непосредственного дочернего элемента:
+    
+    WebElement userName = driver.findElement(By.cssSelector("div > a"));
+    
+Поиск дочернего элемента любого уровня:
+
+    WebElement userName = driver.findElement(By.cssSelector("div a"));
+    
 Поиск по ID элемента:
 
     WebElement userName = driver.findElement(By.cssSelector("input#username"));
     
-    или
+    //или
     
     WebElement userName = driver.findElement(By.cssSelector("#username"));
     
+Поиск по классу:
+
+    WebElement userName = driver.findElement(By.cssSelector("input.classname"));
+    
+    //или
+    
+    WebElement userName = driver.findElement(By.cssSelector(".classname"));
+
 Поиск по значениям атрибутов html тегов:
 
     WebElement previousButton = driver.findElement(By.cssSelector("img[alt='Previous']"));
 
-Посик по названиею атрибутов:
+Посик по названию атрибутов:
 
     List<WebElement> imagesWithAlt = driver.findElements(By.cssSelector("img[alt]"));
+    
+Поиск по началу строки:
+
+    WebElement previousButton = driver.findElement(By.cssSelector("header[id^='page-']"));
+    
+Поиск по окончанию строки:
+
+    WebElement previousButton = driver.findElement(By.cssSelector("header[id$='page-']"));
+
+Поиск по частичному совпадению строки:
+
+    WebElement previousButton = driver.findElement(By.cssSelector("header[id*='page-']"));    
 
 
 ### XPath локаторы
@@ -48,6 +76,14 @@ XPath (XML path) - это язык для нодов (nodes) в XML докуме
 
     WebElement userName = driver.findElement(By.xpath("//input"));
     
+Поиск непосредственного дочернего элемента:
+    
+    WebElement userName = driver.findElement(By.xpath("//div/a"));
+    
+Поиск дочернего элемента любого уровня:
+
+    WebElement userName = driver.findElement(By.xpath("//div//a"));
+    
 Поиск элемента по тексту:
 
     WebElement userName = driver.findElement(By.xpath(".//*[text()='Первая ссылка']/.."));
@@ -59,6 +95,10 @@ XPath (XML path) - это язык для нодов (nodes) в XML докуме
 Посик по названию атрибутов:
 
     List<WebElement> imagesWithAlt = driver.findElements(By.xpath ("img[@alt]"));
+    
+Поиск родительского элемента:
+
+    WebElement userName = driver.findElement(By.xpath("//input[@id='username']/.."));
 
 ### jQuery локаторы
 
@@ -68,31 +108,39 @@ XPath (XML path) - это язык для нодов (nodes) в XML докуме
 
 Первое, что нужно сделать для их использования - проверить поддерживает ли приложение jQuery библиотеку. Если нет, то мы сами должны её добавить:
 
-    bool flag = (bool)js.ExecuteScript("return typeof jQuery == 'undefined'");
-    if (flag)
-      {
-          js.ExecuteScript("var jq = document.createElement('script');
-          jq.src = '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js';
-          document.getElementsByTagName('head')[0].appendChild(jq);");
-      }
+    private static void addJQuery (JavascriptExecutor js) {
+
+        String script = "";
+
+        boolean needInjection = (Boolean)(js.executeScript("return this.$ === undefined;"));
+        if(needInjection) {
+            URL u = Resources.getResource("jquery.js");
+            try {
+                script = Resources.toString(u, Charsets.UTF_8);
+            } catch(IOException e) {
+                e.printStackTrace();
+            }
+            js.executeScript(script);
+        }
+    }
 
 
 Теперь нам нужен объект, с помощью которого мы смогли бы работать с JavaScript и, как следствие, с jQuery. Для этого мы будем использовать **JavaScriptExecutor**
 
-    IWebDriver Driver = new InternetExplorerDriver(@"Path for IE Driver");
-    Driver.Url = "http://google.com";            
-    IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
+    WebDriver driver = new FirefoxDriver();
+    driver.manage().window().maximize();
+
+    JavascriptExecutor js = (JavascriptExecutor)driver;
 
 
 Теперь всё готово, для того, чтобы мы могли использовать jQuery локаторы.
 
-    IEnumerable<IWebElement> elements = 
-        (IEnumerable<IWebElement>)js.ExecuteScript(@"return $(""input[id^='gbq']"")");
+    WebElement element = (WebElement) js.executeScript("return jQuery.find('#hplogo');");
 
 А вот и сам локатор:    
 
-    input[id^='gbq']
+    '#hplogo'
     
 Так же мы можем использовать CSS локаторы внутри jQuery локаторов:
 
-    $(‘input.someclass’)
+    jQuery.find('input.someclass')

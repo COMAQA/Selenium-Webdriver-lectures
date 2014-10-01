@@ -37,7 +37,7 @@ public class WebDriverExample  {
         // Ждем загрузки страницы с таймаутом в 10 секунд
         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
-                return d.getTitle().toLowerCase().startsWith("Selenium");
+                return d.getTitle().toLowerCase().startsWith("selenium");
             }
         });
 
