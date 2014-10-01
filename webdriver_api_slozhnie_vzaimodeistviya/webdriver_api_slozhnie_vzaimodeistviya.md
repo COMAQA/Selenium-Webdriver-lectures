@@ -40,3 +40,64 @@ Selenium WebDriver позволяет имитировать действия п
             verificationErrors.append(e.toString());
         }
     }
+    
+####Другие полезные методы
+
+Клик левой кнопкой мыши:
+
+    click()
+    click(WebElement onElement)
+
+Клик с удержанием:
+
+    clickAndHold()
+    clickAndHold(WebElement onElement)
+    
+Правый клик:
+    
+    contextClick()
+    contextClick(WebElement onElement)
+
+Пример работы с контекстным меню:
+
+    Actions builder = new Actions(driver);
+    builder.contextClick(webElement).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.RETURN).build().perform();
+
+Перетаскивание со смещением:
+
+    dragAndDropBy(WebElement source, int xOffset, int yOffset)
+    
+Нажатие и удержание клавиши и дальнейшее ее отпускание:
+
+    keyDown(Keys theKey) / keyDown(WebElement element, Keys key)
+    keyUp(Keys theKey) / keyUp(WebElement element, Keys key)
+    
+Смещение мыши:
+
+    moveByOffset(int xOffset, int yOffset)
+    
+Перемещение мыши на элемент:
+
+    moveToElement(WebElement toElement)
+    moveToElement(WebElement toElement, int xOffset, int yOffset)
+    
+Отпускание клавиши мыши:
+
+    release()
+    release(WebElement onElement)
+    
+    //Вариант:
+    sendKeys(Keys.NULL)
+
+Набор текста на клавиатуре:
+
+    sendKeys(java.lang.CharSequence... keysToSend)
+    sendKeys(WebElement element, java.lang.CharSequence... keysToSend)
+    
+Построение цепочки действий:
+
+    build()
+    
+Выполнение построенной цепочки действий:
+
+    perform()
