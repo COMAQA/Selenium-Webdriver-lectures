@@ -2,7 +2,7 @@
 Иногда в автоматизации тестировании приходится проверять загрузку файлов (download). Глвное правило, касающееся этого функционала:
 <strong>избегайте загрузки файлов в ваших тестах</strong>.
 
-Дело в том, что как правило протестировать, то что вы хотите протестировать можно без непоседственого сохранения на диск файлов.
+Дело в том, что как правило протестировать, то что вы хотите протестировать можно без непосредственого сохранения на диск файлов.
 
 Пример:
 ```
@@ -34,5 +34,5 @@ public class LogInGetAFileAndCheckItTest extends SeleniumBase {
 }
 ```
 
-Пример взят отсюда https://github.com/Ardesco/What-Did-You-Download. В нем используется кастомное расширение для Webdriver <code>FileDownloader</code>, который позволяет загрузить файл как временный по атрибуту <code>href="путь-к-файлу"</code>, убедиться, что загрузка была успешна (<code>assertEquals(httpStatusCode, 200);</code>), а также сравнить содержимое файла с эталонным, сравнив их хеши (<code>assertEquals(getFileHash(secretFile, SHA1), ("781811ab9052fc61e109012acf5f22da89f2a5be"));</code>). Исходный код расширения можно найти по адресу https://github.com/Ardesco/Powder-Monkey
+Пример взят отсюда https://github.com/Ardesco/What-Did-You-Download. В нем используется кастомное расширение для Webdriver <code>FileDownloader</code>, который позволяет загрузить файл как временный по атрибуту <code>href="путь-к-файлу"</code>, убедиться, что загрузка была успешна (<code>assertEquals(httpStatusCode, 200);</code>), а также сравнить содержимое файла с эталонным, сравнив их хеши (<code>assertEquals(getFileHash(secretFile, SHA1),("781811ab9052fc61e109012acf5f22da89f2a5be"));</code>). Исходный код расширения можно найти по адресу https://github.com/Ardesco/Powder-Monkey
 
