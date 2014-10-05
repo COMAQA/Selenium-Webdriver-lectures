@@ -25,5 +25,5 @@
 * [Selenium Webdriver. Тестирование HTML5 веб приложений](selenium_webdriver_testirovanie_html5_veb_prilozhenii/README.md)
    * [Автоматизация видео плеера.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/avtomatizatsiya_video_pleera.md)
    * [Автоматизация Canvas элементов.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/avtomatizatsiya_canvas_elementov.md)
-   * [Работа с web storage.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/rabota_s_web_storage)
+   * [Работа с web storage.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/rabota_s_web_storage.md)
 
