@@ -23,7 +23,7 @@
    * ["Headless" тестирование с PhantomJS и SlimerJS](selenium_grid_i_headless_brauzeri/headless_testirovanie_s_phantomjs_i_slimerjs.md)
    * [Grid. Настройка и использование.](selenium_grid_i_headless_brauzeri/grid_nastroika_i_isrolzovanie.md)
 * [Selenium Webdriver. Тестирование HTML5 веб приложений](selenium_webdriver_testirovanie_html5_veb_prilozhenii/README.md)
-   * [Автоматизация видео плеера.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/avtomatizatsiya_video_pleera)
+   * [Автоматизация видео плеера.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/avtomatizatsiya_video_pleera.md)
    * [Автоматизация Canvas элементов.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/avtomatizatsiya_canvas_elementov)
    * [Работа с web storage.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/rabota_s_web_storage)
 
