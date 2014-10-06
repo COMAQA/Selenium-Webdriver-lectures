@@ -23,7 +23,7 @@
    * ["Headless" тестирование с PhantomJS и SlimerJS](selenium_grid_i_headless_brauzeri/headless_testirovanie_s_phantomjs_i_slimerjs.md)
    * [Grid. Настройка и использование.](selenium_grid_i_headless_brauzeri/grid_nastroika_i_isrolzovanie.md)
 * [Selenium Webdriver. Проблемные моменты](selenium_webdriver_problemnie_momenti.md)
-   * [Вспомогательные интсрументы](vspomogatelnie_intsrumenti.md)
+   * [Вспомогательные инструменты](vspomogatelnie_intsrumenti.md)
    * [Basic Authentification Window](basic_authentification_window.md)
    * [Загрузка файла](zagruzka_faila.md)
    * [Отправление файла (upload)](otpravlenie_faila_upload.md)
