@@ -38,4 +38,23 @@ for (LogEntry logEntry : logEntries) {
 ```
 Более подробно об этом интерфейсе можно найти на http://selenium.googlecode.com/git/docs/api/java/org/openqa/selenium/logging/Logs.html
 
-#### Получен
+#### Конфигурация логгирования
+Бывают ситуации, когда логгирование необходимо полностью отключить, или сделать минимальным количество сообщений. Например, в случае, когда драйвер работает на устройстве с ограниченными ресурсами. Для поддержки таких ситуаций должна быть возможность конфигурировать логгирование как отдельная настройка в вебдрайвере. Реализовано это путем передачи драйверу списка пар тип лога - уровень логгирования. В большинстве реализаций клиентской части это сделано через <code>DesiredCapabilities</code> класс.
+
+Поведение по умолчанию - это собирать все сообщения и позволить пользователю отфильтровать их, как ему нужно. Если же для определенного типа логов было настроено другое поведение, то сообщения, более детализированного уровня, нежели установленный, не будут собираться.
+
+Пример для Firefox:
+```
+LoggingPreferences logs = new LoggingPreferences();
+logs.enable(LogType.BROWSER, Level.OFF);
+logs.enable(LogType.CLIENT, Level.SEVERE);
+logs.enable(LogType.DRIVER, Level.WARNING);
+logs.enable(LogType.PERFORMANCE, Level.INFO);
+logs.enable(LogType.SERVER, Level.ALL);
+
+DesiredCapabilities desiredCapabilities = DesiredCapabilities.firefox();
+desiredCapabilities.setCapability(CapabilityType.LOGGING_PREFS, logs);
+
+WebDriver driver = new FirefoxDriver(desiredCapabilities);
+```
+
