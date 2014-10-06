@@ -1,0 +1,1 @@
+# Логгирование в Selenium Webdriver

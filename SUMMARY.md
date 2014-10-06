@@ -27,6 +27,8 @@
    * [Basic Authentification Window](basic_authentification_window.md)
    * [Загрузка файла](zagruzka_faila.md)
    * [Отправление файла (upload)](otpravlenie_faila_upload.md)
+   * [Логгирование в Selenium Webdriver](loggirovanie_v_selenium_webdriver.md)
+   * [Скриншоты элементов и работа с изображением](skrinshoti_elementov_i_rabota_s_izobrazheniem.md)
 * [Selenium Webdriver. Тестирование HTML5 веб приложений](selenium_webdriver_testirovanie_html5_veb_prilozhenii/README.md)
    * [Автоматизация Canvas элементов.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/avtomatizatsiya_canvas_elementov.md)
    * [Автоматизация видео плеера.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/avtomatizatsiya_video_pleera.md)
