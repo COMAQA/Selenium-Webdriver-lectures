@@ -38,4 +38,8 @@
    * [Thucydides](selenium_webdriver_testirovanie_html5_veb_prilozhenii/thucydides.md)
    * [Geb](selenium_webdriver_testirovanie_html5_veb_prilozhenii/geb.md)
    * [Selenide](selenium_webdriver_testirovanie_html5_veb_prilozhenii/selenide.md)
+* [Selenium Webdriver. Тестирование на мобильных браузерах](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/README.md)
+   * [Обзор инструментов](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/obzor_instrumentov.md)
+   * [Установка и настройка Appium. Принципы и основы работы с инструментом](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/ustanovka_i_nastroika_appium_printsipi_i_osnovi_raboti_s_instrumentom.md)
+   * [Запуск тестов на десктоп и мобильных браузерах](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/zapusk_testov_na_desktop_i_mobilnih_brauzerah)
 
