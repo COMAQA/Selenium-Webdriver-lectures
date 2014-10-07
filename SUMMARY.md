@@ -23,7 +23,7 @@
    * ["Headless" тестирование с PhantomJS и SlimerJS](selenium_grid_i_headless_brauzeri/headless_testirovanie_s_phantomjs_i_slimerjs.md)
    * [Grid. Настройка и использование.](selenium_grid_i_headless_brauzeri/grid_nastroika_i_isrolzovanie.md)
 * [Selenium Webdriver. Проблемные моменты](selenium_webdriver_problemnie_momenti.md)
-   * [Вспомогательные инструменты](vspomogatelnie_intsrumenti.md)
+   * [Вспомогательные интсрументы](vspomogatelnie_intsrumenti.md)
    * [Basic Authentification Window](basic_authentification_window.md)
    * [Загрузка файла](zagruzka_faila.md)
    * [Отправление файла (upload)](otpravlenie_faila_upload.md)
@@ -33,4 +33,7 @@
    * [Автоматизация Canvas элементов.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/avtomatizatsiya_canvas_elementov.md)
    * [Автоматизация видео плеера.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/avtomatizatsiya_video_pleera.md)
    * [Работа с web storage.](selenium_webdriver_testirovanie_html5_veb_prilozhenii/rabota_s_web_storage.md)
+* [Selenium Webdriver. Расширение инструмента](selenium_webdriver_testirovanie_html5_veb_prilozhenii/selenium_webdriver_rasshirenie_instrumenta.md)
+   * [Selenium "обертки" и расширения](selenium_webdriver_testirovanie_html5_veb_prilozhenii/selenium_obertki_i_rasshireniya.md)
+   * [Thucydides](selenium_webdriver_testirovanie_html5_veb_prilozhenii/thucydides.md)
 
