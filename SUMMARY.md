@@ -36,4 +36,6 @@
 * [Selenium Webdriver. Расширение инструмента](selenium_webdriver_testirovanie_html5_veb_prilozhenii/selenium_webdriver_rasshirenie_instrumenta.md)
    * [Selenium "обертки" и расширения](selenium_webdriver_testirovanie_html5_veb_prilozhenii/selenium_obertki_i_rasshireniya.md)
    * [Thucydides](selenium_webdriver_testirovanie_html5_veb_prilozhenii/thucydides.md)
+   * [Geb](selenium_webdriver_testirovanie_html5_veb_prilozhenii/geb.md)
+   * [Selenide](selenium_webdriver_testirovanie_html5_veb_prilozhenii/selenide.md)
 
