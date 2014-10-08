@@ -38,4 +38,5 @@
    * [Thucydides](selenium_webdriver_testirovanie_html5_veb_prilozhenii/thucydides.md)
    * [Geb](selenium_webdriver_testirovanie_html5_veb_prilozhenii/geb.md)
    * [Selenide](selenium_webdriver_testirovanie_html5_veb_prilozhenii/selenide.md)
+   * [Репортинг](selenium_webdriver_testirovanie_html5_veb_prilozhenii/reporting.md)
 
