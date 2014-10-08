@@ -15,7 +15,7 @@
 * [Page Object Pattern. Архитектура тестового проекта.](page_object_pattern_arhitektura_testovogo_proekta/README.md)
    * [Использование паттерна Page Object.](page_object_pattern_arhitektura_testovogo_proekta/ispolzovanie_patterna_page_object.md)
    * [Альтернативные Page Object подходы.](page_object_pattern_arhitektura_testovogo_proekta/alternativnie_page_object_podhodi.md)
-   * [Вспомогательные инструменты.](page_object_pattern_arhitektura_testovogo_proekta/vspomogatelnie_instrumaenti.md)
+   * [Вспомогательные инструмаенты.](page_object_pattern_arhitektura_testovogo_proekta/vspomogatelnie_instrumaenti.md)
    * [Уровни абстракции. Создание кастомных элементов.](page_object_pattern_arhitektura_testovogo_proekta/urovni_abstraktsii_sozdanie_kastomnih_elementov.md)
    * [Архитектура. Основные элементы. ](page_object_pattern_arhitektura_testovogo_proekta/arhitektura_osnovnie_elementi_primeri.md)
 * [ Selenium Grid и "headless" браузеры](selenium_grid_i_headless_brauzeri/README.md)
