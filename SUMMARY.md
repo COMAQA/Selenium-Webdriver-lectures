@@ -39,7 +39,13 @@
    * [Geb](selenium_webdriver_testirovanie_html5_veb_prilozhenii/geb.md)
    * [Selenide](selenium_webdriver_testirovanie_html5_veb_prilozhenii/selenide.md)
    * [Репортинг](selenium_webdriver_testirovanie_html5_veb_prilozhenii/reporting.md)
+* [Selenium Webdriver. Тестирование клиентской производительности](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/selenium_webdriver_testirovanie_klientskoi_proizvoditelnosti.md)
+   * [Navigation timing API](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/navigation_timing_api.md)
+   * [Browser Mob Proxy](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/browser_mob_proxy.md)
+   * [Инструменты для тестирования производительности](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/instrumenti_dlya_testirovaniya_proizvoditelnosti.md)
+   * [Дальнейшие шаги](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/dalneishie_shagi.md)
 * [Selenium Webdriver. Тестирование на мобильных браузерах](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/README.md)
    * [Обзор инструментов](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/obzor_instrumentov.md)
    * [Установка и настройка Appium. Принципы и основы работы с инструментом](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/ustanovka_i_nastroika_appium_printsipi_i_osnovi_raboti_s_instrumentom.md)
    * [Запуск тестов на десктоп и мобильных браузерах](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/zapusk_testov_na_desktop_i_mobilnih_brauzerah.md)
+
