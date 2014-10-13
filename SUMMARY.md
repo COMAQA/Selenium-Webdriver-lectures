@@ -49,7 +49,7 @@
    * [Установка и настройка Appium. Принципы и основы работы с инструментом](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/ustanovka_i_nastroika_appium_printsipi_i_osnovi_raboti_s_instrumentom.md)
    * [Запуск тестов на десктоп и мобильных браузерах](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/zapusk_testov_na_desktop_i_mobilnih_brauzerah.md)
 * [ Selenium Webdriver. Behavior-Driven Development.](selenium_webdriver_behavior-driven_development/README.md)
-   * [Обзор методологии и инструментов на Java.](selenium_webdriver_behavior-driven_development/obzor_metodologii_i_instrumentov_na_java)
+   * [Обзор методологии и инструментов на Java.](selenium_webdriver_behavior-driven_development/obzor_metodologii_i_instrumentov_na_java.md)
    * [Cucumber JVM + Selenium Webdriver.](selenium_webdriver_behavior-driven_development/cucumber_jvm_+_selenium_webdriver.md)
    * [JBehave + Selenium Webdriver.](selenium_webdriver_behavior-driven_development/jbehave_+_selenium_webdriver.md)
 
