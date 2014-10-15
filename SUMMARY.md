@@ -44,7 +44,6 @@
    * [Browser Mob Proxy](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/browser_mob_proxy.md)
    * [DynaTrace](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/instrumenti_dlya_testirovaniya_proizvoditelnosti.md)
    * [HttpWatch](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/httpwatch.md)
-   * [Дальнейшие шаги](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/dalneishie_shagi.md)
 * [Selenium Webdriver. Тестирование на мобильных браузерах](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/README.md)
    * [Обзор инструментов](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/obzor_instrumentov.md)
    * [Установка и настройка Appium. Принципы и основы работы с инструментом](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/ustanovka_i_nastroika_appium_printsipi_i_osnovi_raboti_s_instrumentom.md)
