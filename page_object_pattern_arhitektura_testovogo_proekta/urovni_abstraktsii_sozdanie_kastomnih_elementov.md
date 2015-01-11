@@ -59,7 +59,7 @@ WebDriver очень мощный инструмент, который позв�
             return tableCols.size();
         }
         
-        public WebElement getCellEditor(int rowIdx, int colIdx, int editorIdx) throws NoSuchElementException {
+        public WebElement getCellEditor(int rowIdx, int colIdx, int editorIdx) {
             try {
                 List<WebElement> tableRows = _webTable.findElements(By.tagName("tr"));
                 WebElement currentRow = tableRows.get(rowIdx-1);
@@ -71,14 +71,5 @@ WebDriver очень мощный инструмент, который позв�
                 throw new NoSuchElementException("Failed to get cell editor");
             }
         }
-        
-        public WebElement getCellEditor(int rowIdx, int colIdx, int editorIdx) {
-            List<WebElement> tableRows = _webTable.findElements(By.tagName("tr"));
-            WebElement currentRow = tableRows.get(rowIdx-1);
-            List<WebElement> tableCols = currentRow.findElements(By.tagName("td"));
-            WebElement cell = tableCols.get(colIdx-1);
-            WebElement cellEditor = cell.findElements(By.tagName("input")).get(0);
-            return cellEditor;
-            }
     }
 
