@@ -17,7 +17,7 @@
     
 Поиск непосредственного дочернего элемента:
     
-    WebElement userName = driver.findElement(By.cssSelector("div > a"));
+    WebElement userName = driver.findElement(By.cssSelector("div>a"));
     
 Поиск дочернего элемента любого уровня:
 
@@ -57,7 +57,7 @@
 
 Поиск по частичному совпадению строки:
 
-    WebElement previousButton = driver.findElement(By.cssSelector("header[id*='page-']"));    
+    WebElement previousButton = driver.findElement(By.cssSelector("header[id*='page-']"));
 
 
 ### XPath локаторы
