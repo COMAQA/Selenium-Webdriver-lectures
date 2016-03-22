@@ -9,7 +9,7 @@
 
 Пример:
 ```
-<div id="element">
+<div id="element_id">
      <p>some content</p>
 </div>```
 
@@ -22,7 +22,7 @@
 Пример:
 
 ```
-<div name="element">
+<div name="element_name">
      <p>some content</p>
 </div>```
 
@@ -35,7 +35,7 @@ WebElement element = driver.findElement(By.name("element_name"));```
 Пример:
 
 ```
-<img class="logo">```
+<img class="element_class">```
 
 Поиск элемента:
 ```
@@ -74,7 +74,7 @@ List<WebElement> elements = driver.findElements(By.tagName("a"));```
 
 Поиск элемента:
 
-```WebElement element = driver.findElement(By.partialLinkText("text"));```
+```WebElement element = driver.findElements(By.partialLinkText("text"));```
 
 7.By.cssSelector
 
