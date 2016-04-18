@@ -64,9 +64,10 @@ Selenium Grid работает следующим образом: имеется
         "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
         "maxSession": 25,
         "port": 5555,
-        "host": ip,
+        "host": hostIp,
         "register": true,
         "registerCycle": 5000,
         "hubPort": 4444
+        "hubHost" : hubIp
       }
     }
