@@ -27,7 +27,7 @@
         //Other Test methods...   
     }
     
-Если же мы хотим тесты на мобильнос Safari, то:
+Если же мы хотим запускать тесты на мобильном Safari, то:
 
      @Before
         public void setUp() throws Exception {
