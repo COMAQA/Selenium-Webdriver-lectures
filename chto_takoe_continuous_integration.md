@@ -1,0 +1,2 @@
+# Что такое Continuous Integration
+
