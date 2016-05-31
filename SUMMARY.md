@@ -60,5 +60,5 @@
 * [Continuous Integration](continuous_integration.md)
    * [Что такое Continuous Integration](chto_takoe_continuous_integration.md)
    * [Распространенные CI-серверы](rasprostranennie_ci-serveri.md)
-   * Jenkins - установка и настройка
+   * [Jenkins - установка и настройка](jenkins_-_ustanovka_i_nastroika.md)
 
