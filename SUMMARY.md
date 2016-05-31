@@ -58,4 +58,5 @@
    * [Настройка тестов для запуска в SauceLabs.](selenium_webdriver_behavior-driven_development/nastroika_testov_dlya_zapuska_v_saucelabs.md)
    * [Использование Sauce Connect и Travis CI.](selenium_webdriver_behavior-driven_development/ispolzovanie_sauce_connect_i_travis_ci.md)
 * [Continuous Integration](continuous_integration.md)
+   * Что такое Continuous Integration
 
