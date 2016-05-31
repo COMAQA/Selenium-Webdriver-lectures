@@ -59,6 +59,6 @@
    * [Использование Sauce Connect и Travis CI.](selenium_webdriver_behavior-driven_development/ispolzovanie_sauce_connect_i_travis_ci.md)
 * [Continuous Integration](continuous_integration.md)
    * [Что такое Continuous Integration](chto_takoe_continuous_integration.md)
-   * Распространенные CI-серверы
+   * [Распространенные CI-серверы](rasprostranennie_ci-serveri.md)
    * Jenkins - установка и настройка
 
