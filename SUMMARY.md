@@ -17,8 +17,8 @@
    * [Альтернативные Page Object подходы.](page_object_pattern_arhitektura_testovogo_proekta/alternativnie_page_object_podhodi.md)
    * [Вспомогательные инструменты.](page_object_pattern_arhitektura_testovogo_proekta/vspomogatelnie_instrumaenti.md)
    * [Уровни абстракции. Создание кастомных элементов.](page_object_pattern_arhitektura_testovogo_proekta/urovni_abstraktsii_sozdanie_kastomnih_elementov.md)
-   * [Архитектура. Основные элементы. ](page_object_pattern_arhitektura_testovogo_proekta/arhitektura_osnovnie_elementi_primeri.md)
-* [ Selenium Grid и "headless" браузеры](selenium_grid_i_headless_brauzeri/README.md)
+   * [Архитектура. Основные элементы.](page_object_pattern_arhitektura_testovogo_proekta/arhitektura_osnovnie_elementi_primeri.md)
+* [Selenium Grid и "headless" браузеры](selenium_grid_i_headless_brauzeri/README.md)
    * [Использование HtmlUnit драйвера в автотестировании](selenium_grid_i_headless_brauzeri/ispolzovanie_htmlunit_draivera_v_avtotestirovanii.md)
    * ["Headless" тестирование с PhantomJS и SlimerJS](selenium_grid_i_headless_brauzeri/headless_testirovanie_s_phantomjs_i_slimerjs.md)
    * [Grid. Настройка и использование.](selenium_grid_i_headless_brauzeri/grid_nastroika_i_isrolzovanie.md)
@@ -48,7 +48,7 @@
    * [Обзор инструментов](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/obzor_instrumentov.md)
    * [Установка и настройка Appium. Принципы и основы работы с инструментом](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/ustanovka_i_nastroika_appium_printsipi_i_osnovi_raboti_s_instrumentom.md)
    * [Запуск тестов на десктоп и мобильных браузерах](selenium_webdriver_testirovanie_na_mobilnih_brauzerah/zapusk_testov_na_desktop_i_mobilnih_brauzerah.md)
-* [ Selenium Webdriver. Behavior-Driven Development.](selenium_webdriver_behavior-driven_development/README.md)
+* [Selenium Webdriver. Behavior-Driven Development.](selenium_webdriver_behavior-driven_development/README.md)
    * [Обзор методологии и инструментов на Java.](selenium_webdriver_behavior-driven_development/obzor_metodologii_i_instrumentov_na_java.md)
    * [Cucumber JVM + Selenium Webdriver.](selenium_webdriver_behavior-driven_development/cucumber_jvm_+_selenium_webdriver.md)
    * [JBehave + Selenium Webdriver.](selenium_webdriver_behavior-driven_development/jbehave_+_selenium_webdriver.md)
@@ -57,4 +57,5 @@
    * [SauceLabs. Услуги и планы.](selenium_webdriver_behavior-driven_development/saucelabs_uslugi_i_plani.md)
    * [Настройка тестов для запуска в SauceLabs.](selenium_webdriver_behavior-driven_development/nastroika_testov_dlya_zapuska_v_saucelabs.md)
    * [Использование Sauce Connect и Travis CI.](selenium_webdriver_behavior-driven_development/ispolzovanie_sauce_connect_i_travis_ci.md)
+* Continuous Integration
 
