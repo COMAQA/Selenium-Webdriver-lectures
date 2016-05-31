@@ -1,4 +1,4 @@
-# Использование Sauce Connect и Travis CI.
+# Использование Sauce Connect.
 
 ####Sauce Connect
 Sauce Connect это приложение для туннельного доступа к серверу Sauce Labs, которое обеспечивает безопасных канал обмена данными в обход фаерволла.
@@ -16,21 +16,3 @@ sc -u username -k AccessCode
 Подставив вместо *"username"* имя пользователя, которое вы указали при регистрации, а вместо *"AccessCode"* - код доступа, который был сгенерирован в личном кабинете SauceLabs.
 
 Как только в консоли появится сообщение "connected" можно запускать тесты в режиме тунеллирования.
-
-####Travis CI
-
-В первую очередь необходимо создать в репозитории файл .travis.yml
-
-Для работы с Sauce Labs с помощью Travis CI необходимо передавать тестам свои учетные данные для репозитория. Чтобы они не были видны в коде, можно их скрыть в переменных окружения и читать оттуда. Для этого нужно сгенерировать соответствующие параметры (https://docs.saucelabs.com/ci-integrations/travis-ci/) и добавить их в .travis.yml. Общий вид представлен ниже:
-
-    env:
-        global:
-            - secure: "Secure username token goes here!"
-            - secure: "Secure access key token goes here!"
-
-Далее нужно настроить Travis CI, чтобы он запускал Sauce Connect, добавив в файл .travis.yml следующее:
-    
-    addons:
-        sauce_connect: true
-        
-После этого можно запускать тесты в Sauce Labs с использованием Travis CI.
