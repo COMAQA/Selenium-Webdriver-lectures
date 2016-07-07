@@ -92,7 +92,7 @@ XPath (XML path) - это язык для нодов (nodes) в XML докуме
 
     WebElement userName = driver.findElement(By.xpath("//input[@id='username']"));
     
-Посик по названию атрибутов:
+Поиск по названию атрибутов:
 
     List<WebElement> imagesWithAlt = driver.findElements(By.xpath ("img[@alt]"));
     
