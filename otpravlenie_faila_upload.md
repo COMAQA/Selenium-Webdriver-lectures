@@ -26,4 +26,4 @@ DesiredCapabilities capabillities = DesiredCapabilities.firefox();
 driver = new RemoteWebDriver(new URL(REMOTE_HUB_URL),capabillities);
 driver.setFileDetector(new LocalFileDetector());
 ```
-Метод <code>setFileDetector</code> говорит вебдрайверу, что файл загружается с локальной машины на удаленный сервер вместо обычного указания локального пути к файлу. В таком случае вебдрайвер отправит файл, закодированный в base64 формате, по JSON Wire протоколу на сервер прежде, чем вводить путь к файлу.
+Метод <code>setFileDetector</code> говорит вебдрайверу, что файл загружается с локальной машины на удаленный сервер вместо обычного указания локального пути к файлу. В таком случае, вебдрайвер отправит файл, закодированный в base64 формате, по JSON Wire протоколу на сервер прежде, чем вводить путь к файлу.
