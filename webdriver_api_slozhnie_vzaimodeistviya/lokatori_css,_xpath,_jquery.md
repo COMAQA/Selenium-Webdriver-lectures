@@ -43,7 +43,7 @@
 
     WebElement previousButton = driver.findElement(By.cssSelector("img[alt='Previous']"));
 
-Посик по названию атрибутов:
+Поиск по названию атрибутов:
 
     List<WebElement> imagesWithAlt = driver.findElements(By.cssSelector("img[alt]"));
     
