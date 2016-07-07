@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class WebDriverExample  {
     public static void main(String[] args) {
         // Создаем экземпляр WebDriver
-        // Следует отметить что скрипт работает с интерфейсом,
+        // Следует отметить, что скрипт работает с интерфейсом,
         // а не с реализацией.
         WebDriver driver = new FirefoxDriver();
 
