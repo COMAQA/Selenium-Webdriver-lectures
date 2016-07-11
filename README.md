@@ -14,7 +14,7 @@ Selenium Webdriver lectures
 * техники работы с локаторами
 * вспомогательные инструменты для работы с page object и локаторами
 * виды page object
-* дезайн паттерны и принципы построения эффективной архитектуры для автоматизации тестирования
+* дизайн паттерны и принципы построения эффективной архитектуры для автоматизации тестирования
 * интеграция с другими инструментами, включая [Selenide](http://ru.selenide.org/), [Allure Framework](http://allure.qatools.ru/), [HTML Elements](https://github.com/yandex-qatools/htmlelements), [Thucydides](http://www.thucydides.info/#/), [Geb](http://www.gebish.org/), [Sikuli](http://www.sikuli.org/) и другие
 * актуальные рецепты для решения типовых задач и сложных моментов, связанных  автоматизацией тестирования веб приложений
 * а также [Selenium Grid](https://github.com/SeleniumHQ/selenium/wiki/Grid2), эффективное распараллеливание тестов, тестирование производительности, тестирование мобильных приложений с [appium](http://appium.io/), интеграция с CI инструментами и облачными сервисами.
