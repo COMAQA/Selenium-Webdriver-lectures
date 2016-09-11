@@ -11,11 +11,11 @@ public static File captureElementBitmap(WebDriver, driver, WebElement element) t
     // Получаем размеры элемента
     int width = element.getSize().getWidth();
     int height = element.getSize().getHeight();
-    // Создаем прямоуголник (Rectangle) с размерами элемента
+    // Создаем прямоугольник (Rectangle) с размерами элемента
     Rectangle rect = new Rectangle(width, height);
     // Получаем координаты элемента
     Point p = element.getLocation();
-    // Вырезаем изображенеи элемента из общего изображения
+    // Вырезаем изображение элемента из общего изображения
     BufferedImage dest = img.getSubimage(p.getX(), p.getY(), rect.width, rect.height);
     // Перезаписываем File screen
     ImageIO.write(dest, "png", screen);
