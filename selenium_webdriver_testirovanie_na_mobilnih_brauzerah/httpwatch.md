@@ -32,7 +32,7 @@ IWebDriver driver = new InternetExplorerDriver();
 string uniqueTitle = Guid.NewGuid().ToString();
 IJavaScriptExecutor js = driver as IJavaScriptExecutor;
 js.ExecuteScript("document.title = '" + uniqueTitle + "';");
-// Подключаем HttpWatch ксозданному экземпляру IE драйвера
+// Подключаем HttpWatch к созданному экземпляру IE драйвера
 Plugin plugin = control.AttachByTitle(uniqueTitle);
 // Открываем окно HTTPWatch
 plugin.OpenWindow(false);
