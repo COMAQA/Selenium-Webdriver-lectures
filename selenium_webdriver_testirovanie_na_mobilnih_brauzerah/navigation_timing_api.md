@@ -17,7 +17,7 @@ public void testLogin() {
     Webdriver driver = new FirefoxDriver();
     driver.get(SOME_URL);
     JavascriptExecutor js = (JavascriptExecutor) driver;
-    // Получаем время Load Event End (окончание загрузки страниы)
+    // Получаем время Load Event End (окончание загрузки страницы)
     long loadEventEnd = (Long) js.executeScript("return window.performance.timing.loadEventEnd;");
     // Получаем Navigation Event Start (начало перехода)
     long navigationStart = (Long) js.executeScript("return window.performance.timing.navigationStart;");
