@@ -1,6 +1,6 @@
 # JBehave + Selenium Webdriver.
 
-**JBehave** – это еще один из инструментов пользующихся популярностью, когда речь заходит о BDD подходе на проекте. Он похож на Cucumber-JVM, так же использует язык Gherkin для написания тестовых сценариев. Только расширение для файлов здесть уже ".story". Вот пример такого файла:
+**JBehave** – это еще один из инструментов пользующихся популярностью, когда речь заходит о BDD подходе на проекте. Он похож на Cucumber-JVM, так же использует язык Gherkin для написания тестовых сценариев. Только расширение для файлов здесь уже ".story". Вот пример такого файла:
 
     Narrative: I should be able to Calculate my Body Mass Index
     
@@ -12,7 +12,7 @@
     When I click on the Calculate button
     Then I should see bmi as '24.4' and category as 'Normal'
 
-Следующим шагом, после создания тестового сценария, является написание java класса, котрый может выглядеть следующим образом:
+Следующим шагом, после создания тестового сценария, является написание java класса, который может выглядеть следующим образом:
 
     import junit.framework.Assert;
     import org.jbehave.core.annotations.Then;
@@ -56,7 +56,7 @@
         }
     }
     
-После чего мы должны создать конфигурацинный файл для коректного взаимодействия Selenium и JBehave:
+После чего мы должны создать конфигурационный файл для корректного взаимодействия Selenium и JBehave:
 
     import java.util.List;
     import org.jbehave.core.configuration.Configuration;
