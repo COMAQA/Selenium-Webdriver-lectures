@@ -33,7 +33,7 @@ public class WebDriverExample  {
         // Проверяем тайтл страницы
         System.out.println("Page title is: " + driver.getTitle());
 
-        // Страницы гугл динамически отрисовывается с помощью javascript
+        // Страницы гугл динамически отрисовываются с помощью javascript
         // Ждем загрузки страницы с таймаутом в 10 секунд
         (new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d) {
