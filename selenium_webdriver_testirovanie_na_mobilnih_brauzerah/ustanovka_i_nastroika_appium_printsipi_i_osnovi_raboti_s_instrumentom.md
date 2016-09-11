@@ -13,7 +13,7 @@
 
 **Настройка**:
 1. Первым делом мы устанавливаем [Node.js](http://nodejs.org/download/) (выше 0.10 версии)
-2. Затем устанавливаем [Android SDK](http://developer.android.com/sdk/index.html). С поддерэкой API Level 17 или выше. Создаем переменную окружения ANDROID_HOME, куда добавляем пути к папкам tools и platform-tools.
+2. Затем устанавливаем [Android SDK](http://developer.android.com/sdk/index.html). С поддержкой API Level 17 или выше. Создаем переменную окружения ANDROID_HOME, куда добавляем пути к папкам tools и platform-tools.
 3. Устанавливаем Java JDK и прописываем к нему пути в переменной JAVA_HOME.
 4. Далее нам нужно установить [Apache Ant](http://ant.apache.org/bindownload.cgi). Так же добавляем путь к его папке в переменную окружения - PATH.
 5. После чего устанавливаем [Apache Maven](http://maven.apache.org/download.cgi). Создаем две переменные M2HOME и M2, куда соответственно вписываем пути к папке Maven и паке bin, внутри неё.
