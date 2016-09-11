@@ -31,7 +31,7 @@ SET DT_AE_AGENTACTIVE=true
 SET DT_AE-AGENTNAME=Firefox
 ```
 Это можно сделать как в IntelliJ Idea (run => edit configurations => Environment variables => "+"), если вы запускаете тесты через IntelliJ Idea, или, используя команды для командной строки, указанные выше, если вы запускаете тесты через командную строку (например, с помощью maven), или же просто установив переменные вручную в windows.
-3. Использовать брузер с профилем по умолчанию (default):
+3. Использовать браузер с профилем по умолчанию (default):
 ```
 @Before
 public void setUp() throws Exception
@@ -39,9 +39,9 @@ public void setUp() throws Exception
         // Создаем экземпляр профиля и получаем профиль "по умолчанию"
         ProfilesIni profile = new ProfilesIni();
         FirefoxProfile ffprofile = profile.getProfile("default");
-        // Создем драйвер, передав ему профиль "по умолчанию"
+        // Создаем драйвер, передав ему профиль "по умолчанию"
         driver = new FirefoxDriver(ffprofile);
 }
 ```
-В результате запуска тестов в окне dynaTrace AJAX Edition под опцией Session вы увидите данные о производительности, собранные в ходе теста, а также рекоммендации по оптимизации производительности приложения.
+В результате запуска тестов в окне dynaTrace AJAX Edition под опцией Session вы увидите данные о производительности, собранные в ходе теста, а также рекомендации по оптимизации производительности приложения.
 ![](/resources/dynatrace_report.png)
